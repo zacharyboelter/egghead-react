@@ -10,17 +10,21 @@
   <div id="root"></div>
   <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
-  <script type="text/javascript">
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+  // <script type="text/javascript">
     const rootElement = document.getElementById('root')
-    const element = React.createElement('div',
-     {
-      className: 'container',
-      // children: ['Hello, Mr. Muhfugga. Hi how ya doing', 'Goodbye cruel world!']
-    },
-      'Hello, Madame Troussaant', //can but the child as the third option as well
-      ' Goodbye cruel world!!' // children props now becomes an array
-    )
-    console.log(element)
+    const element = <div className='container'>Hello, Mr Muhfuggagghgga</div>
+
+    // const element = React.createElement('div',
+    //  {
+    //   className: 'container',
+    //   // children: ['Hello, Mr. Muhfugga. Hi how ya doing', 'Goodbye cruel world!']
+    // },
+    //   'Hello, Madame Troussaant', //can but the child as the third option as well
+    //   ' Goodbye cruel world!!' // children props now becomes an array
+    // )
+    // console.log(element)
     ReactDOM.render(element, rootElement)
     // const element = document.createElement('div')
     // element.textContent = 'Hello, mr. muhfugga'
