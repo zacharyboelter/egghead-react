@@ -16,7 +16,8 @@
     const rootElement = document.getElementById('root')
     const children = 'Hello World, aka Mr muhfugga'
     const className = 'container'
-    const element = <div className={className}>{children}</div>
+    const props = {children, className}
+    const element = <div id='app-root' {...props} />
    
     ReactDOM.render(element, rootElement)
    
