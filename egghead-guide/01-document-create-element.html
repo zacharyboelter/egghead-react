@@ -17,8 +17,8 @@
     const Message = props => <div classname='message'>{props.msg}</div>
     const element = <>
       <div>
-        {Message({msg: 'Hello World'})}
-        {Message({msg: 'Goodbye World'})}
+        <Message msg='Hello World' />
+        <Message msg='Goodbye World' />
 
       </div>
     </>
