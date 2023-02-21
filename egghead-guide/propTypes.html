@@ -21,9 +21,16 @@
                     Hello {firstName} {lastName} !
                 </div>
             )
+            SayHello.propTypes = {
+                firstName(props, propName, componentName){
+                    if(typeof props[propName] !== 'string'){
+                        return new Error('Hey, the component ${componentName} needs the prop ${propName} to be a string, but you passed ${typeof props[propName]}')
+                    }
+                }
+            }
         }
 
-        const element = <SayHello firstName={flase} />
+        const element = <SayHello firstName={false} />
         ReactDOM.render(element, rootElement)
 
 
